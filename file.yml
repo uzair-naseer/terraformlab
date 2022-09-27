@@ -6,7 +6,6 @@
    tasks:
    - name: install httpd
      ansible.builtin.package:
-
        name: httpd
        state: latest
    - name: copy index.html
@@ -16,8 +15,7 @@
       mode: 0644
       owner: root
       group: root
-   -name: start https server
-    ansible.builtin.service:
-
-      name: httpd
-      state: started
+   - name: start https server
+     ansible.builtin.service:
+       name: httpd
+       state: started
